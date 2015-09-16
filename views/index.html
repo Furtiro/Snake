@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Snake </title>
+<!-- Load the Paper.js library -->
+
+</head>
+<body>
+
+
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
+
+<canvas id="myCanvas" height="400px" width="400px"  ></canvas>
+
+<p id="demo"></p>
+
+
+<!-- Load the Paper.js library -->
+<script type="text/javascript" src="paper-full.js"></script>
+
+<script type="text/javascript" >
+
+//Only executed our code once the DOM is ready.
+window.onload = function() {
+	// Get a reference to the canvas object
+	var canvas = document.getElementById('myCanvas');
+	// Create an empty project and a view for the canvas:
+		
+	paper.setup(canvas);
+	// Create a Paper.js Path to draw a line into it:
+	var path = new paper.Path();
+	// Give the stroke a color
+	path.strokeColor = 'black';
+	var start = new paper.Point(100, 100);
+	// Move to start and draw a line from there
+	path.moveTo(start);
+	// Note that the plus operator on Point objects does not work
+	// in JavaScript. Instead, we need to call the add() function:
+	path.lineTo(start.add([ 200, -50 ]));
+	// Draw the view now:
+	paper.view.draw();
+
+}
+
+</script>
+</body>
+</html>
