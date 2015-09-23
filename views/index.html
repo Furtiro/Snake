@@ -3,44 +3,28 @@
 <head>
 <title> Snake </title>
 
-
 </head>
+
 <body>
 
 
 
-<canvas id="myCanvas" width="700" height="300" ></canvas>
 
-
-
-
+<canvas id="myCanvas" width="500" height="300" ></canvas>
 <!-- Load the Paper.js library -->
 <script type="text/javascript" src="paper-full.js"></script>
 
-<script type="text/paperscript" canvas="myCanvas" )>
+<script type="text/paperscript" canvas="myCanvas" src="snake.js" />
 
-//Variable qui contiendra le 'papier' à dessiner
-var myPath;
 
-function onMouseDown(event) {
-    myPath = new Path();
-myPath.strokeColor = 'black';
-console.log('mousedown');
-}
-
-function onMouseDrag(event) {
-    myPath.add(event.point);
-
-console.log('mousedrag');
-}
-
-function onMouseUp(event) {
-    var myCircle = new Path.Circle(event.point, 5);
-	myCircle.strokeColor = 'black';
-	console.log('mouseup');
-}
 
 
 </script>
 </body>
 </html>
+
+<style>
+canvas {
+border: 10px inset black;
+}
+</style>
