@@ -5,7 +5,7 @@ var tailleBonbon = 8;
 
 
 //Taille de départ du gentil snake
-var taille=20;
+var taille=10;
 
 //Boolean qui est soit égal à 'aplacer' si un bonbon doit être placé soit 'placé' si un bonbon est placé
 var boolBonbon='aplacer';
